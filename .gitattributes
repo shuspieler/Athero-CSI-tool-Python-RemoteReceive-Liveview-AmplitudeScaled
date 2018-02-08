@@ -1,5 +1,2 @@
-*.py linguist-language=Python
 Client-PC/* linguist-vendored
 Client-Router/* linguist-vendored
-*.c linguist-vendored=false
-*.h linguist-vendored=false
