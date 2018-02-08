@@ -1,0 +1,94 @@
+\hypertarget{udp_8c}{\section{/home/shuspieler/\+Atheros-\/\+C\+S\+I-\/\+Tool-\/\+User\+Space-\/\+A\+P\+P/recv\+C\+S\+I-\/with-\/socket/udp.c File Reference}
+\label{udp_8c}\index{/home/shuspieler/\+Atheros-\/\+C\+S\+I-\/\+Tool-\/\+User\+Space-\/\+A\+P\+P/recv\+C\+S\+I-\/with-\/socket/udp.\+c@{/home/shuspieler/\+Atheros-\/\+C\+S\+I-\/\+Tool-\/\+User\+Space-\/\+A\+P\+P/recv\+C\+S\+I-\/with-\/socket/udp.\+c}}
+}
+
+
+init and close function for socket(udp)  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$sys/types.\+h$>$}\\*
+{\ttfamily \#include $<$sys/socket.\+h$>$}\\*
+{\ttfamily \#include $<$linux/in.\+h$>$}\\*
+Include dependency graph for udp.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{udp_8c__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{udp_8c__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{udp_8c_aff119789f658dc4654c7d31d04caa9ea}{init\+\_\+udp} (const char $\ast$strptr, unsigned short portnum)
+\item 
+int \hyperlink{udp_8c_a7e1d80b405a569a1d308aa0b9244514d}{close\+\_\+udp} (int cfd)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+init and close function for socket(udp) 
+
+=====================================================================================
+
+\begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Shu
+\end{DoxyAuthor}
+Email \+: \href{mailto:ierenshu@163.com}{\tt ierenshu@163.\+com}
+
+\begin{DoxyDate}{Date}
+Juni,2017
+\end{DoxyDate}
+Organization\+: L\+I\+K\+E @ F\+A\+U
+
+Copyright (c) L\+I\+K\+E @ F\+A\+U 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{udp_8c_a7e1d80b405a569a1d308aa0b9244514d}{\index{udp.\+c@{udp.\+c}!close\+\_\+udp@{close\+\_\+udp}}
+\index{close\+\_\+udp@{close\+\_\+udp}!udp.\+c@{udp.\+c}}
+\subsubsection[{close\+\_\+udp}]{\setlength{\rightskip}{0pt plus 5cm}int close\+\_\+udp (
+\begin{DoxyParamCaption}
+\item[{int}]{cfd}
+\end{DoxyParamCaption}
+)}}\label{udp_8c_a7e1d80b405a569a1d308aa0b9244514d}
+close socket after use
+
+
+\begin{DoxyParams}{Parameters}
+{\em cfd} & handle of socket \\
+\hline
+\end{DoxyParams}
+\hypertarget{udp_8c_aff119789f658dc4654c7d31d04caa9ea}{\index{udp.\+c@{udp.\+c}!init\+\_\+udp@{init\+\_\+udp}}
+\index{init\+\_\+udp@{init\+\_\+udp}!udp.\+c@{udp.\+c}}
+\subsubsection[{init\+\_\+udp}]{\setlength{\rightskip}{0pt plus 5cm}int init\+\_\+udp (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{strptr, }
+\item[{unsigned short}]{portnum}
+\end{DoxyParamCaption}
+)}}\label{udp_8c_aff119789f658dc4654c7d31d04caa9ea}
+this function will initialize the socket which use udp protocal
+
+
+\begin{DoxyParams}{Parameters}
+{\em strptr} & parameter for ip address of the server, which should be a 15 bit char array or simplely like this\+: const char strptr\mbox{[}\mbox{]} = \char`\"{}192.\+168.\+199.\+120\char`\"{} \\
+\hline
+{\em portnum} & port number of the server eg\+: unsigned short portnum = 0x1031 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+if the socket\+\_\+init is ok, it will the return the handle of the socket if something wrong, it will return -\/1 and print a message 
+\end{DoxyReturn}

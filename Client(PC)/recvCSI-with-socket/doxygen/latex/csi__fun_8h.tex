@@ -1,0 +1,79 @@
+\hypertarget{csi__fun_8h}{\section{/home/shuspieler/\+Atheros-\/\+C\+S\+I-\/\+Tool-\/\+User\+Space-\/\+A\+P\+P/recv\+C\+S\+I-\/with-\/socket/csi\+\_\+fun.h File Reference}
+\label{csi__fun_8h}\index{/home/shuspieler/\+Atheros-\/\+C\+S\+I-\/\+Tool-\/\+User\+Space-\/\+A\+P\+P/recv\+C\+S\+I-\/with-\/socket/csi\+\_\+fun.\+h@{/home/shuspieler/\+Atheros-\/\+C\+S\+I-\/\+Tool-\/\+User\+Space-\/\+A\+P\+P/recv\+C\+S\+I-\/with-\/socket/csi\+\_\+fun.\+h}}
+}
+
+
+head file for csi processing fucntion  
+
+
+{\ttfamily \#include $<$stdbool.\+h$>$}\\*
+Include dependency graph for csi\+\_\+fun.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{csi__fun_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{csi__fun_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structCOMPLEX}{C\+O\+M\+P\+L\+E\+X}
+\item 
+struct \hyperlink{structcsi__struct}{csi\+\_\+struct}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{csi__fun_8h_a389034e92c00d57ac17143a2db0cff54}{\#define {\bfseries Kernel\+\_\+\+C\+S\+I\+\_\+\+S\+T\+\_\+\+L\+E\+N}~23}\label{csi__fun_8h_a389034e92c00d57ac17143a2db0cff54}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{csi__fun_8h_aed5f3e73e01248d8a2d6792a69081f9e}{bool {\bfseries is\+\_\+big\+\_\+endian} ()}\label{csi__fun_8h_aed5f3e73e01248d8a2d6792a69081f9e}
+
+\item 
+\hypertarget{csi__fun_8h_a99fac622f5ac7ca70c01b972b07b93cf}{int {\bfseries open\+\_\+csi\+\_\+device} ()}\label{csi__fun_8h_a99fac622f5ac7ca70c01b972b07b93cf}
+
+\item 
+\hypertarget{csi__fun_8h_a207679327e5eaea46de448f0bb80ca86}{void {\bfseries close\+\_\+csi\+\_\+device} (int fd)}\label{csi__fun_8h_a207679327e5eaea46de448f0bb80ca86}
+
+\item 
+\hypertarget{csi__fun_8h_aa3bb68539af1843371ac0554235dffae}{int {\bfseries read\+\_\+csi\+\_\+buf} (unsigned char $\ast$buf\+\_\+addr, int fd, int B\+U\+F\+S\+I\+Z\+E)}\label{csi__fun_8h_aa3bb68539af1843371ac0554235dffae}
+
+\item 
+\hypertarget{csi__fun_8h_a40a1ee251b887facc992e28711ebd8b6}{void {\bfseries record\+\_\+status} (unsigned char $\ast$buf\+\_\+addr, int cnt, \hyperlink{structcsi__struct}{csi\+\_\+struct} $\ast$csi\+\_\+status)}\label{csi__fun_8h_a40a1ee251b887facc992e28711ebd8b6}
+
+\item 
+\hypertarget{csi__fun_8h_a40e91176bbd23b1a1a611cce733314c0}{void {\bfseries record\+\_\+csi\+\_\+payload} (unsigned char $\ast$buf\+\_\+addr, \hyperlink{structcsi__struct}{csi\+\_\+struct} $\ast$csi\+\_\+status, unsigned char $\ast$data\+\_\+buf, \hyperlink{structCOMPLEX}{C\+O\+M\+P\+L\+E\+X}($\ast$csi\+\_\+buf)\mbox{[}3\mbox{]}\mbox{[}114\mbox{]})}\label{csi__fun_8h_a40e91176bbd23b1a1a611cce733314c0}
+
+\item 
+\hypertarget{csi__fun_8h_afa9350afae7ab5a1eac665b050736fc0}{void {\bfseries porcess\+\_\+csi} (unsigned char $\ast$data\+\_\+buf, \hyperlink{structcsi__struct}{csi\+\_\+struct} $\ast$csi\+\_\+status, \hyperlink{structCOMPLEX}{C\+O\+M\+P\+L\+E\+X}($\ast$csi\+\_\+buf)\mbox{[}3\mbox{]}\mbox{[}114\mbox{]})}\label{csi__fun_8h_afa9350afae7ab5a1eac665b050736fc0}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+head file for csi processing fucntion 
+
+=====================================================================================
+
+\begin{DoxyVersion}{Version}
+\+: 1.\+0
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+\+: Yaxiong Xie
+\end{DoxyAuthor}
+Email \+: \href{mailto:xieyaxiongfly@gmail.com}{\tt xieyaxiongfly@gmail.\+com}
+
+Organization\+: W\+A\+N\+D\+S group @ Nanyang Technological University
+
+Copyright (c) W\+A\+N\+D\+S group @ Nanyang Technological University 
+

@@ -1,0 +1,21 @@
+Hostapd will detect the environment to determine the bandwidth automatibally. Sometime we need 40Mhz for our test.
+
+in the folder of hpstapd, open: src/ap/hw_features.c
+
+remove the following:
+
+if (!oper40) { // change to if (0)
+        wpa_printf(MSG_INFO, "20/40 MHz operation not permitted on "
+               "channel pri=%d sec=%d based on overlapping BSSes",
+               iface->conf->channel,
+               iface->conf->channel +
+               iface->conf->secondary_channel * 4);
+        iface->conf->secondary_channel = 0;
+        iface->conf->ht_capab &= ~HT_CAP_INFO_SUPP_CHANNEL_WIDTH_SET;
+    }
+
+open: hostapd-2.5/hostapd/hostapd.conf
+
+find: ht_capab=[HT20][HT40-][SHORT-GI-20][SHORT-GI-40]
+
+to: ht_capab=[HT40+][SHORT-GI-40]

@@ -1,0 +1,103 @@
+\hypertarget{main_8c}{\section{/home/shuspieler/\+Atheros-\/\+C\+S\+I-\/\+Tool-\/\+User\+Space-\/\+A\+P\+P/recv\+C\+S\+I-\/with-\/socket/main.c File Reference}
+\label{main_8c}\index{/home/shuspieler/\+Atheros-\/\+C\+S\+I-\/\+Tool-\/\+User\+Space-\/\+A\+P\+P/recv\+C\+S\+I-\/with-\/socket/main.\+c@{/home/shuspieler/\+Atheros-\/\+C\+S\+I-\/\+Tool-\/\+User\+Space-\/\+A\+P\+P/recv\+C\+S\+I-\/with-\/socket/main.\+c}}
+}
+
+
+main function\+: log C\+S\+I to file or to server or to both.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$fcntl.\+h$>$}\\*
+{\ttfamily \#include $<$errno.\+h$>$}\\*
+{\ttfamily \#include $<$termios.\+h$>$}\\*
+{\ttfamily \#include $<$pthread.\+h$>$}\\*
+{\ttfamily \#include $<$signal.\+h$>$}\\*
+{\ttfamily \#include $<$sys/types.\+h$>$}\\*
+{\ttfamily \#include $<$sys/stat.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}csi\+\_\+fun.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}udp.\+c\char`\"{}}\\*
+Include dependency graph for main.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{main_8c_aeca034f67218340ecb2261a22c2f3dcd}{\#define {\bfseries B\+U\+F\+S\+I\+Z\+E}~4096}\label{main_8c_aeca034f67218340ecb2261a22c2f3dcd}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{main_8c_a4f31a6fd48ee5d4579ae4aaaa3cae285}{void {\bfseries sig\+\_\+handler} (int signo)}\label{main_8c_a4f31a6fd48ee5d4579ae4aaaa3cae285}
+
+\item 
+int \hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{main_8c_a2896431d6a80cd39b3d24b40237612ee}{int {\bfseries quit}}\label{main_8c_a2896431d6a80cd39b3d24b40237612ee}
+
+\item 
+\hypertarget{main_8c_a9f58335fad30c6bd2b698625a3d73d69}{unsigned char {\bfseries buf\+\_\+addr} \mbox{[}B\+U\+F\+S\+I\+Z\+E\mbox{]}}\label{main_8c_a9f58335fad30c6bd2b698625a3d73d69}
+
+\item 
+\hypertarget{main_8c_a063bbc9223e9af84c5c89bac0fe07c97}{unsigned char {\bfseries data\+\_\+buf} \mbox{[}1500\mbox{]}}\label{main_8c_a063bbc9223e9af84c5c89bac0fe07c97}
+
+\item 
+\hypertarget{main_8c_a436cda53ccd071f63670e70d88352a89}{\hyperlink{structCOMPLEX}{C\+O\+M\+P\+L\+E\+X} {\bfseries csi\+\_\+matrix} \mbox{[}3\mbox{]}\mbox{[}3\mbox{]}\mbox{[}114\mbox{]}}\label{main_8c_a436cda53ccd071f63670e70d88352a89}
+
+\item 
+\hypertarget{main_8c_a7d2f33c074a1b238be658ca6a049110c}{\hyperlink{structcsi__struct}{csi\+\_\+struct} $\ast$ {\bfseries csi\+\_\+status}}\label{main_8c_a7d2f33c074a1b238be658ca6a049110c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+main function\+: log C\+S\+I to file or to server or to both. 
+
+=====================================================================================
+
+Here is an example for receiving C\+S\+I matrix, Basic C\+Si procesing fucntion is also implemented and called, Check \hyperlink{csi__fun_8c}{csi\+\_\+fun.\+c} for detail of the processing function;
+
+A function which log the C\+S\+I to a server is added in.
+
+\begin{DoxyVersion}{Version}
+\+: 2.\+0
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+\+: Yaxiong Xie
+\end{DoxyAuthor}
+modified by\+: Shu Ren
+
+Email \+: \href{mailto:xieyaxiongfly@gmail.com}{\tt xieyaxiongfly@gmail.\+com}; \href{mailto:ierenshu@163.com}{\tt ierenshu@163.\+com}
+
+Organization\+: W\+A\+N\+D\+S group @ Nanyang Technological University; L\+I\+K\+E @ F\+A\+U
+
+Copyright (c) W\+A\+N\+D\+S group @ Nanyang Technological University; L\+I\+K\+E @ F\+A\+U 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{\index{main.\+c@{main.\+c}!main@{main}}
+\index{main@{main}!main.\+c@{main.\+c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{main_8c_a0ddf1224851353fc92bfbff6f499fa97}
+receive C\+S\+I and save to a file or send to a server or both
+
+Usage 1\+: recv\+\_\+csi $<$output\+\_\+file$>$
+
+Usage 2\+: recv\+\_\+csi $<$Server-\/ip$>$ $<$port$>$
+
+Usage 3\+: recv\+\_\+csi $<$ip$>$ $<$port$>$ $<$output\+\_\+file$>$ 
