@@ -1,4 +1,5 @@
 *.py linguist-language=Python
-special-vendored-path/* linguist-vendored
+Client(PC)/* linguist-vendored
+Client(Router)/* linguist-vendored
 *.c linguist-vendored=false
 *.h linguist-vendored=false
